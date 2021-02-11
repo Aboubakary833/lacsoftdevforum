@@ -4,16 +4,18 @@ class DataBase {
     protected $dbname;
     protected $username;
     protected $password;
+    protected $bridge;
     public function __construct($dbname, $username, $password) {
         $this->dbname = $dbname;
         $this->username = $username;
         $this->password = $password;
-    }
-
-    public function bridge() {
-        $pdo_exc = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
+        $pdo_exc = array(
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC,
+            PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
+        );
         try {
-            return new PDO('mysql:host=localhost;dbname='. $this->dbname, $this->username, $this->password, $pdo_exc);
+            $this->bridge = new PDO('mysql:host=localhost;dbname='. $this->dbname, $this->username, $this->password, $pdo_exc);
         } catch (PDOException $err) {
             die('ERROR: '. $err -> getMessage());
         }
@@ -31,11 +33,11 @@ class DataBase {
 
     public function setData($toInsert, $table, $columns, $condition = null) {
         if(isset($condition)) {
-            $this->bridge->prepare('INSERT INTO '. $table .'('. $columns .') VALUES('. implode(',', array_fill(0, count($toInsert), '?')) .') WHERE '. $condition);
-            $this->bridge->execute($toInsert);
+            $req = $this->bridge->prepare('INSERT INTO '. $table .'('. $columns .') VALUES('. implode(',', array_fill(0, count($toInsert), '?')) .') WHERE '. $condition);
+            $req->execute($toInsert);
         } else {
-            $this->bridge->prepare('INSERT INTO '. $table .'('. $columns .') VALUES('. implode(',', array_fill(0, count($toInsert), '?')) .')');
-            $this->bridge->execute($toInsert);
+            $req = $this->bridge->prepare('INSERT INTO '. $table .'('. $columns .') VALUES('. implode(',', array_fill(0, count($toInsert), '?')) .')');
+            $req->execute($toInsert);
         }
     }
 

@@ -2,7 +2,6 @@
 class Authentification {
     protected $data;
     protected $db;
-    protected $error;
     public function __construct($data, $db) {
         $this->data = $data;
         $this->db = $db;
@@ -20,15 +19,11 @@ class Authentification {
         $lastname = $this->data['lastname'];
         $username = $this->data['username'];
         $password = $this->data['password'];
-
-    }
-
-    public function match($type, $dataToCheck) {
-        if($type === "login") {
-            return $dataToCheck[0] === $dataToCheck[1] && $dataToCheck[2] === $dataToCheck[3];
-        } else if($type === "signin") {
-            return $dataToCheck[0] === $dataToCheck[1];
-        }
+        $image = '';
+        $cryptedID = round(random_int(3, 5) * 10 + strlen($username));
+        $totalPosts = 0;
+        $totalComments = 0;
+        
     }
 }
 ?>
