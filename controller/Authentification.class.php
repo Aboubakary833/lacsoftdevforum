@@ -1,29 +1,37 @@
 <?php
+
+require_once "../model/DataBase.class.php";
+
 class Authentification {
-    protected $data;
+    protected $username = null;
+    protected $password = null;
+    protected $signupData = null;
     protected $db;
-    public function __construct($data, $db) {
-        $this->data = $data;
-        $this->db = $db;
-        $this->error = null;
+
+    public function __construct($data) {
+        $this->db =  new DataBase('forum', 'root', '');
+        if(count($data) == 7) {
+            $this->signupData = $data;
+        } else {
+            $this->username = $data[0];
+            $this->password = $data[1];
+        }
     }
 
     public function login() {
-        $username = $this->data['username'];
-        $password = $this->data['password'];
-        
+        $prepare = 'SELECT * FROM users WHERE username=? AND password=?';
+        $execute = array($this->username, $this->password);
+        $req = $this->db->prep_request($prepare, $execute);
+        $res = $req->fetch();
+        if($req->rowCount() == 1) return true;
+        else {
+            return false;
+        }
     }
 
-    public function signin() {
-        $firstname = $this->data['firstname'];
-        $lastname = $this->data['lastname'];
-        $username = $this->data['username'];
-        $password = $this->data['password'];
-        $image = '';
-        $cryptedID = round(random_int(3, 5) * 10 + strlen($username));
-        $totalPosts = 0;
-        $totalComments = 0;
-        
+    public function signup() {
+        $prepare = 'SELECT * FROM users WHERE firstname=? AND lastname=? AND username=? AND email=? AND '
     }
 }
+
 ?>

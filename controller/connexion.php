@@ -1,7 +1,16 @@
 <?php
-require_once "../model/DataBase.class.php";
 
-$db = new DataBase('forum', 'root', '');
-$tab = ['Karim', 'Cissé', 'kc', 1234, 'none', 8965, 15,44];
-$admin = $db->setData($tab, 'admin', 'firstname, lastname, username, password, image, cryptedID, totalPosts, totalComments');
+require_once "Authentification.class.php";
+
+$username = htmlspecialchars($_POST['username']);
+$password = $_POST['password'];
+$data = array();
+array_push($data, $username, $password);
+$connexion = new Authentification($data);
+
+if($connexion->login()) {
+    echo 'accueil.php';
+} else {
+    echo 'L\'un ou les deux champs est incorrect!';
+}
 ?>

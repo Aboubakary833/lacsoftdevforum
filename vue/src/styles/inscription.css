@@ -61,16 +61,18 @@ body {
     color: rgb(212, 10, 10);
 }
 
+#form_bloc {
+    overflow-y: scroll;
+}
+
 #form_bloc h1 {
     color: #fff;
     font-weight: 500;
-    margin-top: 100px;
-    margin-bottom: 50px;
 }
 
 #form_bloc form {
     width: auto;
-    height: auto;
+    height: auto;margin-bottom: 50px;
     display: block;
     text-align: center;
     
@@ -111,6 +113,20 @@ form input[name]:hover {
     background: rgba(253, 253, 253, 0.856);
 }
 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 12px;
+    background: #eee;
+    border: none;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: none;
+    border-radius: 10px;
+    background: rgb(122, 121, 139);
+}
+
 
 @media(max-width: 1125px) {
     #shape_field .login {
@@ -138,7 +154,9 @@ form input[name]:hover {
 }
 
 @media(max-width: 900px) {
+    body {overflow-y: scroll;}
     #container {display: block;}
+    ::-webkit-scrollbar {display: none;}
 
     #shape_field {
         display: none;

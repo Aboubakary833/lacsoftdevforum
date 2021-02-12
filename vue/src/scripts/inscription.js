@@ -8,7 +8,7 @@ form.addEventListener('submit', (e) => {
     const xhr = new XMLHttpRequest();
     const data = new FormData(e.target);
 
-    xhr.open('POST', '../../controller/connexion.php', true);
+    xhr.open('POST', '../../controller/inscription.php', true);
     xhr.setRequestHeader('X_REQUESTED_WITH', 'xmlhttprequest');
     xhr.onload = () => {
         const res = xhr.responseText;
