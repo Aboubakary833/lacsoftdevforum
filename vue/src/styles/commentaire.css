@@ -1,0 +1,190 @@
+body {
+    background: #f6f6f6;
+}
+header {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 20px auto;
+    box-shadow: 0 0 0 2px #eee;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left:0;
+}
+
+header > div {
+    width: 50%;
+    padding: 15px 0px;
+    text-align: left;
+}
+
+header > div:first-of-type i{margin-left: 15px;}
+
+header > div > span {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+main {
+    width: 60%;
+    margin-top: 100px;
+    margin: auto;
+}
+#post_comment {
+    width: 95%;
+    height: auto;
+    padding: 20px;
+    border: none;
+    margin: auto;
+}
+
+.post {
+    width: min(84%);
+    height: auto;
+    margin: 50px auto;
+    display: block;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    background: #fff;
+
+}
+
+.postheader {
+    width: inherit;
+    display: flex;
+    margin: auto;
+    padding-bottom: 10px;
+    justify-content: space-between;
+}
+
+.postheader .user {
+    display: flex;
+    margin-right: 10px;
+}
+
+.postheader .user span {
+    font-size: 30px;
+    font-weight: bolder;
+    margin-top: 5px;
+}
+
+.postheader .user img {
+    width: 17%;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #ddd;
+    margin-top: 3px;
+}
+
+.postheader .date {
+    color: #707070;
+    font-size: large;
+    font-weight: 500;
+    text-align: right;
+    margin-top: 15px;
+}
+
+.postcontent {
+    width: 90%;
+    height: auto;
+    margin: 10px auto;
+    padding: 10px 0;
+    background: #f6f6f6;
+    border: #f6f6f6;
+    border-radius: 5px;
+    text-align: center;
+    word-wrap: break-word;
+   }
+
+.like_comment {
+   width: 90%;
+   height: auto;
+   padding: 5px 0;
+   margin: auto;
+   display: block;
+}
+
+.like_comment div {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   padding: 5px 0;
+}
+
+.like_comment div:last-of-type {border-top: 1px solid #fdfdfd;}
+
+.like_comment div:first-of-type span {color: #707070;}
+
+.like_comment div:last-of-type a {color: #000;}
+
+.like_comment div:last-of-type a:first-of-type {cursor: pointer;}
+
+.like_comment div:last-of-type a span {font-size: 20px;}
+
+.like_comment div:last-of-type a i{font-size: 32px;}
+
+.comment {
+    width: min(84%);
+    height: auto;
+    background: #f0f0f0;
+    border: 1px solid  #ddd;
+    margin: 30px auto;
+    padding: 10px;
+}
+
+.comment_header {
+    width: 100%;
+    margin: auto 30px;
+    display: flex;
+}
+
+.comment_header span {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 15px;
+}
+
+.comment_header img {
+    width: 50px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #ddd;
+    margin-top: 3px;
+}
+
+.comment_content{
+    width: 100%;
+}
+
+.comment_header .date {
+    margin-left: 50%;
+}
+
+main form {
+    width: 50%;
+    background: #fff;
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin: 0 52px;
+    padding: 4px 8px;
+    position: fixed;
+    bottom: 0;
+}
+
+main form input {
+    width: 90%;
+    height: 32px;
+    margin-bottom: 5px;
+    border: none;
+    outline: none;
+}
+
+main form button {
+    font-size: 22px;
+    margin-top: 3px;
+    border: none;
+    outline: none;
+    background: transparent;
+}

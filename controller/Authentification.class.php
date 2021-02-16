@@ -5,11 +5,11 @@ require_once "../model/DataBase.class.php";
 class Authentification {
     protected $username = null;
     protected $password = null;
-    protected $signupData = null;
+    protected $signupData;
     protected $db;
 
     public function __construct($data) {
-        $this->db =  new DataBase('forum', 'root', '');
+        $this->db = new DataBase('forum', 'root', '');
         if(count($data) == 7) {
             $this->signupData = $data;
         } else {
@@ -22,7 +22,6 @@ class Authentification {
         $prepare = 'SELECT * FROM users WHERE username=? AND password=?';
         $execute = array($this->username, $this->password);
         $req = $this->db->prep_request($prepare, $execute);
-        $res = $req->fetch();
         if($req->rowCount() == 1) return true;
         else {
             return false;
@@ -30,7 +29,10 @@ class Authentification {
     }
 
     public function signup() {
-        $prepare = 'SELECT * FROM users WHERE firstname=? AND lastname=? AND username=? AND email=? AND '
+            $prepareInsertion = 'INSERT INTO users(userID, firstname, lastname, username, email, password, role) VALUES(?, ?, ?, ?, ?, ?, ?)';
+            $executeInsertion = $this->signupData;
+            $req = $this->db->prep_request($prepareInsertion, $executeInsertion);
+            return $req ? true : false;
     }
 }
 

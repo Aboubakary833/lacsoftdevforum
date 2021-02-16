@@ -1,0 +1,241 @@
+body {background: #f6f6f6;}
+
+header {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    display: flex;
+    padding: 7px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 1.5px #ddd;
+}
+
+#title_field{
+    width: 50%;
+    text-align: left;
+    word-spacing: 0.5px;
+}
+
+#brand {margin-left: 45px;}
+
+#brand span {
+    font-size: 38px;
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+#brand span:last-of-type {
+    color: #000;
+}
+
+#menu_field {
+    width: 50%;
+    display: flex;
+}
+
+#publish {margin-top: 15px;}
+
+#publish a{
+    background: var(--secondary);
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 1px 4px #ddd;
+}
+
+#publish a:hover {
+    box-shadow: 0 0 0 transparent;
+    opacity: 0.8;
+}
+
+#menu_field form {
+    width: 50%;
+    height: 35px;
+    display: flex;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    margin-top: 7px;
+}
+
+#menu_field form input {
+    width: 80%;
+    height: 25px;
+    border: none;
+    outline: none;
+    margin-top: 4px;
+}
+
+#menu_field form button {
+    border: none;
+    outline: none;
+    color: #707070;
+    font-size: large;
+    background: transparent;
+    margin-top: 4px;
+    margin-left: 4px;
+}
+
+#notif_profil {
+    font-size: 30px;
+    margin-top: 7px;
+}
+
+#notif_profil a {color: #000;}
+
+#notif_profil a:first-of-type {margin-right: 35px;}
+
+main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    position: fixed;
+    margin-top: 60px;
+}
+ .postField {
+     width: 60%;
+     height: 100vh;
+     padding-bottom: 50px;
+     overflow-y: scroll;
+ }
+
+ ::-webkit-scrollbar {
+     -webkit-appearance: none;
+     width: 10px;
+     height: auto;
+     border: 0.5px solid #ddd;
+     border-radius: 5px;
+     margin-top: 50px;
+ }
+
+ ::-webkit-scrollbar-thumb {
+    border: none;
+    border-radius: 10px;
+    background: rgb(122, 121, 139);
+}
+
+ .post {
+     width: min(84%);
+     height: auto;
+     margin: 50px auto;
+     display: block;
+     padding: 10px;
+     border: 1px solid #ddd;
+     border-radius: 7px;
+     background: #fff;
+
+ }
+
+ .postheader {
+     width: inherit;
+     display: flex;
+     margin: auto;
+     padding-bottom: 10px;
+     justify-content: space-between;
+ }
+
+ .postheader .user {
+     display: flex;
+     margin-right: 10px;
+ }
+
+ .postheader .user span {
+     font-size: 30px;
+     font-weight: bolder;
+     margin-top: 5px;
+ }
+
+ .postheader .user img {
+     width: 17%;
+     border-radius: 50%;
+     box-shadow: 0 0 0 3px #ddd;
+     margin-top: 3px;
+ }
+
+ .postheader .date {
+     color: #707070;
+     font-size: large;
+     font-weight: 500;
+     text-align: right;
+     margin-top: 15px;
+ }
+
+ .postcontent {
+     width: 90%;
+     height: auto;
+     margin: 10px auto;
+     padding: 10px 0;
+     background: #fdfdfd;
+     border: #f6f6f6;
+     border-radius: 5px;
+     text-align: center;
+     word-wrap: break-word;
+    }
+
+.like_comment {
+    width: 90%;
+    height: auto;
+    padding: 5px 0;
+    margin: auto;
+    display: block;
+}
+
+.like_comment div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+
+.like_comment div:last-of-type {border-top: 1px solid #fdfdfd;}
+
+.like_comment div:first-of-type span {color: #707070;}
+
+.like_comment div:last-of-type a {color: #000;}
+
+.like_comment div:last-of-type a:first-of-type {cursor: pointer;}
+
+.like_comment div:last-of-type a span {font-size: 20px;}
+
+.like_comment div:last-of-type a i{font-size: 32px;}
+
+
+ #categories {
+     width: 30%;
+     height: auto;
+     margin: 50px auto;
+     padding: 15px;
+     background: #fff;
+     border: 1px solid #ddd;
+     border-radius: 7px;
+
+ }
+
+ #categories h1 {margin-top: 50px;}
+
+ #categories div {
+    width: 80%;
+    margin: 70px auto;
+ }
+
+ #categories div a{
+    width: 100%;
+     height: auto;
+     padding: 0 7px;
+     color: #000;
+     font-size: 26px;
+     font-weight: bold;
+     display: flex;
+ }
+
+ #categories div a:hover {background: #f6f6f6;}
+
+ #categories div a img{
+     width: 17%;
+ }
+
+ #categories div a span {margin-top: 7px;}

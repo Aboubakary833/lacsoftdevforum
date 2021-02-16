@@ -37,6 +37,6 @@
         </div>
     </div>
 
-    <script src="../src/scripts/connexion.js" type="text/JavaScript"></script>
+    <script src="../src/scripts/inscription.js" type="text/JavaScript"></script>
 </body>
 </html>

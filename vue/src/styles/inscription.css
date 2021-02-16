@@ -62,6 +62,7 @@ body {
 }
 
 #form_bloc {
+    overflow-x: hidden;
     overflow-y: scroll;
 }
 

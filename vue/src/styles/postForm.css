@@ -1,0 +1,112 @@
+body {background: #f6f6f6;}
+
+header {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    display: flex;
+    padding: 7px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 1.5px #ddd;
+}
+
+#homepageLink {
+    width: 50%;
+    text-align: left;
+    word-spacing: 0.5px;
+    margin-top: 15px;
+}
+
+#homepageLink a {margin-left: 45px;}
+
+#homepageLink a span {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+#title_field{
+    width: 50%;
+    text-align: right;
+    word-spacing: 0.5px;
+}
+
+#brand {margin-right: 45px;}
+
+#brand span {
+    font-size: 38px;
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+#brand span:last-of-type {
+    color: #000;
+}
+
+main {
+    width: 80%;
+    height: auto;
+    background: #fff;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 15px;
+    margin: 100px auto;
+}
+
+form textarea{
+    width: 60%;
+    height: 75px;
+    padding-top: 10px;
+    text-indent: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+    background: #f6f6f6;
+}
+
+form div {
+    margin: 20px 30px;
+}
+
+form label[for="file"] {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    border-radius: 3px;
+    background: #707070;
+    color: #fff;
+    font-weight: 500;
+}
+
+form #file {display: none;}
+
+form button[type='submit'] {
+    margin-top: 30px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 17px;
+    font-weight: bold;
+    outline: none;
+    background: var(--secondary);
+}
+
+.error {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 5px 10px;
+    background: rgb(241, 162, 162);
+    border: 1px solid rgb(248, 82, 82);
+    color: rgb(235, 50, 50);
+    border-radius: 3px;
+    margin-top: 25px;
+    margin-left: 33%;
+    cursor: pointer;
+}
+
+#errSpan {font-size: x-small;}
