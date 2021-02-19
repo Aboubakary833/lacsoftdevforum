@@ -22,7 +22,7 @@
             <span></span>
             <button><span>x</span></button>
             </div>
-            <form>
+            <form name="form">
                 <input type="text" name="username" placeholder="Nom d'utilisateur" required><br>
                 <input type="password" name="password" placeholder="Mot de passe" required><br>
                 <button type="submit">Connexion</button>
@@ -31,6 +31,6 @@
         </div>
     </div>
 
-    <script src="../src/scripts/connexion.js" type="text/JavaScript"></script>
+    <script src="../src/scripts/connexion.js" type="text/javascript"></script>
 </body>
 </html>

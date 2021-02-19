@@ -5,17 +5,8 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
     const xhr = new XMLHttpRequest();
     const data = new FormData(e.target);
-    const children = e.target.children;
-    children[0].value = "";
-    children[2].value = "";
-    children[4].value = "";
-    children[6].value = "";
-    children[8].value = "";
-    children[10].value = "";
-    children[12].value = "";
-    children[14].value = "";
 
-    xhr.open('POST', '../../controller/inscription.php', true);
+    xhr.open('POST', '../../controller/traitements/inscription.php', true);
     xhr.setRequestHeader('X_REQUESTED_WITH', 'xmlhttprequest');
     xhr.onload = () => {
         const res = xhr.responseText;
@@ -25,7 +16,16 @@ form.addEventListener('submit', (e) => {
         }
     }
     xhr.send(data);
-});
+    const children = e.target.children;
+    children[0].value = "";
+    children[2].value = "";
+    children[4].value = "";
+    children[6].value = "";
+    children[8].value = "";
+    children[10].value = "";
+    children[12].value = "";
+    children[14].value = "";
+ });
 
 
 

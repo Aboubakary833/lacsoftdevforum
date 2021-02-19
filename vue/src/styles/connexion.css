@@ -33,7 +33,7 @@ body {
     margin: auto;
     padding: 10px;
     background: rgb(255, 153, 153);
-    border: 1.5px solid rgb(212, 10, 10);
+    border: none;
     border-radius: 3px;
     display: none;
 }

@@ -22,7 +22,7 @@
             <span></span>
             <button><span>x</span></button>
             </div>
-            <form>
+            <form action='../../controller/traitements/inscription.php' method='POST'>
                 <input type="text" name="firstname" placeholder="Prénom" required><br>
                 <input type="text" name="lastname" placeholder="Nom" required><br>
                 <input type="text" name="username" placeholder="Nom d'utilisateur" required><br>
@@ -33,10 +33,9 @@
                 <input type="text" name="role" placeholder="Rôle" required><br>
                 <button type="submit">Inscrire</button>
             </form>
-            
+            <a class="link" href="index.php">Page de connexion</a>
         </div>
     </div>
-
     <script src="../src/scripts/inscription.js" type="text/JavaScript"></script>
 </body>
 </html>

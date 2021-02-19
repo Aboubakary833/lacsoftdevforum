@@ -56,8 +56,10 @@ $commentReq = $db->prep_request($commentprepare, $commentExecute);
                 }
                 ?>
             </div>
-            <form action="commentaire.php" method="post">
-                <input type="text" placeholder="Votre commentaire...">
-                <button><i class="fa fa-paper-plane"></i></button>
+            <form action="addComment.php" method="post">
+                <input type="text" name="userID" class="hidden" value="<?=$userId;?>">
+                <input type="text" name="postID" class="hidden" value="<?=$postsId;?>">
+                <input type="text" name="content" placeholder="Votre commentaire...">
+                <button type="submit"><i class="fa fa-paper-plane"></i></button>
             </form>
         </main>

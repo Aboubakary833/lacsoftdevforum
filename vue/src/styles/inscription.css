@@ -33,7 +33,7 @@ body {
     margin: auto;
     padding: 10px;
     background: rgb(255, 153, 153);
-    border: 1.5px solid rgb(212, 10, 10);
+    border: none;
     border-radius: 3px;
     display: none;
 }
@@ -64,6 +64,7 @@ body {
 #form_bloc {
     overflow-x: hidden;
     overflow-y: scroll;
+    padding-bottom: 100px;
 }
 
 #form_bloc h1 {
@@ -73,7 +74,8 @@ body {
 
 #form_bloc form {
     width: auto;
-    height: auto;margin-bottom: 50px;
+    height: auto;
+    margin-bottom: 50px;
     display: block;
     text-align: center;
     
@@ -128,6 +130,15 @@ form input[name]:hover {
     background: rgb(122, 121, 139);
 }
 
+.link {
+    margin-bottom: 100px;
+    padding: 13px 20px;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 25px;
+    background: #707070;
+}
 
 @media(max-width: 1125px) {
     #shape_field .login {

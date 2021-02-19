@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <link rel="stylesheet" href="../vue/src/fonts/fontawesome-free/css/all.min.css">
-    <link rel="stylesheet" href="../vue/src/styles/general.css">
-    <link rel="stylesheet" href="../vue/src/styles/accueil.css">
+    <link rel="stylesheet" href="../../vue/src/fonts/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="../../vue/src/styles/general.css">
+    <link rel="stylesheet" href="../../vue/src/styles/accueil.css">
     <title>Accueil</title>
 </head>
 <body>
