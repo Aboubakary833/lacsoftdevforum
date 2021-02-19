@@ -34,7 +34,7 @@ class Authentification {
         $execute = array($this->username);
         $req = $this->db->prep_request($prepare, $execute);
         $res = $req->fetch();
-        return '../../controller/traitements/posts.php?azenht4us='.$res['userID'];
+        return 'accueil.php?azenht4us='.$res['userID'];
     }
 
     public function userExist($firstname, $lastname, $username) {

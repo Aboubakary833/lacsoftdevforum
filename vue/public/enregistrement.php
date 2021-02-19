@@ -22,7 +22,7 @@
             <span></span>
             <button><span>x</span></button>
             </div>
-            <form action='../../controller/traitements/inscription.php' method='POST'>
+            <form>
                 <input type="text" name="firstname" placeholder="Prénom" required><br>
                 <input type="text" name="lastname" placeholder="Nom" required><br>
                 <input type="text" name="username" placeholder="Nom d'utilisateur" required><br>

@@ -1,6 +1,9 @@
 <?php
-require_once "../vue/public/commentaireField.php";
-require_once "../model/DataBase.class.php";
+
+
+require_once "../../model/DataBase.class.php";
+
+
 $userId = $_GET['user_id'];
 $postsId = $_GET['post_id'];
 $db = new DataBase('forum', 'root', '');
@@ -16,7 +19,7 @@ $commentReq = $db->prep_request($commentprepare, $commentExecute);
             <div id="post_comment">
                 <div class="post">
                     <div class="postheader">
-                        <div class="user"><img src="../vue/src/images/<?= $posts['avatar']; ?>" alt="<?= $posts['firstname']. ' ' .$posts['lastname'] ;?>"> <span>&nbsp;&nbsp;<?= $posts['username']; ?></span></div>
+                        <div class="user"><img src="../src/images/<?= $posts['avatar']; ?>" alt="<?= $posts['firstname']. ' ' .$posts['lastname'] ;?>"> <span>&nbsp;&nbsp;<?= $posts['username']; ?></span></div>
                         <div class="date"><?= $posts['date']; ?></div>
                     </div>
                     <div class="postcontent">
@@ -25,7 +28,7 @@ $commentReq = $db->prep_request($commentprepare, $commentExecute);
                         if($posts['image'] != 'none') {
                             ?>
                             <div>
-                              <img src="../vue/src/images/<?= $posts['image']; ?>" alt="">
+                              <img src="../src/images/<?= $posts['image']; ?>" alt="">
                             </div>
                             <?php
                         }
@@ -44,7 +47,7 @@ $commentReq = $db->prep_request($commentprepare, $commentExecute);
                     ?>
                 <div class="comment">
                     <div class="comment_header">
-                        <img src="../vue/src/images/<?=$comment['avatar']?>" alt="<?=$comment['username']?>">
+                        <img src="../src/images/<?=$comment['avatar']?>" alt="<?=$comment['username']?>">
                         <span><?=$comment['username'];?></span>
                         <span class="date"><?=$comment['date']?></span>
                     </div>
@@ -56,7 +59,7 @@ $commentReq = $db->prep_request($commentprepare, $commentExecute);
                 }
                 ?>
             </div>
-            <form action="addComment.php" method="post">
+            <form action="../../controller/traitements/addComment.php" method="post">
                 <input type="text" name="userID" class="hidden" value="<?=$userId;?>">
                 <input type="text" name="postID" class="hidden" value="<?=$postsId;?>">
                 <input type="text" name="content" placeholder="Votre commentaire...">

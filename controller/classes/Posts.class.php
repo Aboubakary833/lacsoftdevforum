@@ -24,9 +24,8 @@ class Post {
 
     public function setPost(array $data, $file) {
         $this->userID = $data['userID'];
-        $this->postID = $data['postID'];
-        $this->text = $data['content'];
-        $this->category = $data['category'];
+        $this->text = $data['text'];
+        $this->category = isset($data['category']) ? $data['category'] : '';
         isset($file) ? $this->img = $file : 'none';
 
         $day = date('d');
@@ -46,7 +45,7 @@ class Post {
             $prepare = "INSERT INTO posts(IDPost, category, text, image, authorID, likes, date) VALUES(?,?,?,?,?,?,?)";
             $execute = ['', $this->category, $this->text,$imgName, $this->userID, 0, $this->date];
             $req = $this->db->prep_request($prepare, $execute);
-            return $req;
+            return true;
         }
     }
 }

@@ -1,5 +1,5 @@
 <?php
-require_once "../model/DataBase.class.php";
+require_once "../../model/DataBase.class.php";
 $user_id = $_POST['userID'];
 $post_id = $_POST['postID'];
 $content = $_POST['content'];
@@ -16,6 +16,6 @@ $executeInsertion = array('', $content, $post_id, $user_id, $date);
 $req = $db->prep_request($prepareInsertion, $executeInsertion);
 
 if($req) {
-    header('Location:commentaire.php?user_id='.$user_id.'&post_id='.$post_id);
+    header('Location: ../../vue/public/commentaireField.php?user_id='.$user_id.'&post_id='.$post_id);
 }
 ?>
