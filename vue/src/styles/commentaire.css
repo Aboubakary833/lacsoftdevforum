@@ -98,6 +98,12 @@ main {
     word-wrap: break-word;
    }
 
+   .postcontent img {
+    width: 100%;
+    height: auto;
+    margin-left: 50%;
+}
+
 .like_comment {
    width: 90%;
    height: auto;
@@ -138,6 +144,8 @@ main {
     width: 100%;
     margin: auto 30px;
     display: flex;
+    justify-content: space-between;
+    
 }
 
 .comment_header span {
@@ -145,6 +153,11 @@ main {
     font-weight: 500;
     margin: 15px;
 }
+
+.comment_header span:first-of-type {display: flex;}
+
+.comment_header span:last-of-type {margin-right: 75px;}
+
 
 .comment_header img {
     width: 50px;
@@ -191,3 +204,62 @@ main form button {
 }
 
 .hidden {display: none;}
+
+@media(max-width: 1125px) {
+    main {width: 80%;}
+    main form {
+        width: 68%;
+        background: #fff;
+        display: flex;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        margin: 0 50px;
+        padding: 4px 8px;
+        position: fixed;
+        bottom: 0;
+    }
+}
+
+@media(max-width: 900px) {
+    main {width: 85%;}
+    main form {width: 70%;}
+    .postheader .user span {font-size: 24px;}
+    .postheader .date {font-size: 15px;}
+    .postcontent h1 {font-size: 24px;}
+    
+}
+
+@media(max-width: 745px) {
+    main {width: 92%;}
+    main form {width: 75%;}
+    .postheader .user span {font-size: 24px;}
+    .postheader .date {font-size: 15px;}
+    .postcontent h1 {font-size: 24px;}
+}
+
+@media(max-width: 610px) {
+    main {width: 95%;}
+    main form {
+        width: 80%;
+        margin-right: 3%;
+    }
+    .postheader .user span {font-size: 19px;}
+    .postheader .date {font-size: 13px;}
+    .postcontent h1 {font-size: 21px;}
+    .comment_header span:last-of-type {font-size: 15px;}
+}
+
+@media(max-width: 550px) {
+    main {
+        width: 100%;
+        overflow: hidden;
+    }
+    main form {
+        width: 78%;
+        margin: 0 10px;
+    }
+    .postheader {display: block;}
+    .postheader .user span {font-size: 17px;}
+    .postheader .date {font-size: 12px;}
+    .postcontent h1 {font-size: 21px;}
+}

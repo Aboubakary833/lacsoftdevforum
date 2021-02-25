@@ -28,6 +28,15 @@
         <h1>Votre publication</h1>
         <form action="../../controller/traitements/insertPost.php" method="POST" enctype="multipart/form-data">
             <textarea type="text" name="text" placeholder="Entrez le texte de votre post...." required></textarea><br>
+            <input type="text" name="category" list="categories" placeholder="Catégorie du post" required>
+            <datalist id="categories">
+                <option value="HTML"></option>
+                <option value="CSS"></option>
+                <option value="JavaScript"></option>
+                <option value="NodeJS"></option>
+                <option value="PHP"></option>
+                <option value="MySQL"></option>
+            </datalist>
             <input type="hidden" name="userID" value="<?=$_GET['user_id'];?>">
             <div>
                 <label for="file">Image pour votre post</label>

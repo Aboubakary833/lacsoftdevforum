@@ -1,3 +1,12 @@
+<?php
+
+require_once "../../model/DataBase.class.php";
+$db = new DataBase('forum', 'root', '');
+$req = $db->queryData('SELECT * FROM users');
+if($req->rowCount() == 0) header('Location: enregistrement.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

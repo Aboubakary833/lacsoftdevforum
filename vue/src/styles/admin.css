@@ -26,7 +26,23 @@ header > div > span {
     font-weight: bolder;
 }
 
-main {margin-top: 75px;}
+main {margin-top: 100px;}
+
+.addUser {
+    padding: 10px 15px;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    outline: none;
+    background: var(--secondary);
+    box-shadow: 0 1px 3px #ddd;
+}
+
+.addUser:hover {
+    box-shadow: 0 0 0 transparent;
+    opacity: 0.8;
+}
 
 .panel {
     width: 90vw;
@@ -34,7 +50,7 @@ main {margin-top: 75px;}
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
-    margin: auto;
+    margin: 50px auto;
 }
 
 .panelHead {
@@ -46,34 +62,58 @@ main {margin-top: 75px;}
 
 .panelHead div {
     padding: 13px 20px;
-    border-bottom: 1px solid #ddd;
+    cursor: pointer;
 }
 
-#users {border-right: 1px solid #ddd;}
-#comments {border-left: 1px solid #ddd;}
+.panelList {
+    width: auto;
+    background: rgb(219, 219, 253);
+    display: flex;
+}
 
-#userData {
+.users {border-right: 1px solid #ddd;}
+.comments {border-left: 1px solid #ddd;}
+
+.usersData, .commentsData, .postsData {
     width: 100%;
     height: auto;
+    display: none;
     padding: 0;
     margin: 0;
 }
-#postsData {display: none;}
-#commentsData {display: none;}
 
-table {
+.show {display: block;}
+
+table, tr {
     width: 100%;
     height: auto;
+    padding: 13px;
 }
 
-thead {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    
-}
+tbody tr {height: 50px;}
 
-th, tr {
-    width: inherit;
+th, td {
     height: auto;
+    padding: 7px 10px;
+}
+
+td .del {
+    color: #fff;
+    border: none;
+    padding: 6px 15px;
+    background: linear-gradient(#ff1010, rgb(236, 10, 10));
+    box-shadow: 0 1px 2px grey;
+}
+
+td .del:hover {
+    background: #ff1010;
+    box-shadow: 0 0 0 #ddd;
+}
+
+.users, .posts, .comments {border-bottom: 1px solid #ddd;}
+
+.active {
+    background: rgb(219, 219, 253);
+    border-bottom: none;
+    display: block;
 }

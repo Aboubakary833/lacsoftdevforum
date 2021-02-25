@@ -1,18 +1,24 @@
 <?php
 
+$search = $_GET['q'];
+$user_id = $_GET['user_id'];
 require_once "../../model/DataBase.class.php";
-
 $db = new DataBase('forum', 'root', '');
-$postSql = 'SELECT * FROM posts INNER JOIN users ON authorID=userID ORDER BY date DESC';
 $commentNumPrep = 'SELECT * FROM comments WHERE post_ID=?';
-$req = $db->queryData($postSql);
-?>
+$prepare = 'SELECT * FROM posts INNER JOIN users ON authorID=userID WHERE category=? OR username=? OR image=? OR text=?';
+$execute = [$search, $search, $search, $search];
+$req = $db->prep_request($prepare, $execute);
 
-    <main>
+if($req->rowCount() == 0) {
+    ?>
+    
+        <div id="htmlPost">
+            <h1>Aucune publication pour le terme "<?=$search;?>"</h1>
+        </div>
+    <?php
+} else {
 
-        <div class="postField">
-                <?php
-               while ($posts = $req->fetch()) {
+     while ($posts = $req->fetch()) {
                 ?>
                 <div class="post">
                     <div class="postheader">
@@ -62,38 +68,7 @@ $req = $db->queryData($postSql);
                     </div>
                 </div>
                 <?php
-            }
-        
-        ?>
-            
-        </div>
-        <div id="categories">
-            <h1>Des discussion sur: </h1>
-            <div>
-                <a href="../../controller/traitements/category.php?cat=htmlcss" id="htmlCssPosts">
-                    <img src="../src/fonts/html.png" alt="Logo HTML5">
-                    <img src="../src/fonts/css.png" alt="Logo CSS3">
-                    <span>HTML & CSS</span>
-                </a>
-            </div>
-            <div>
-                <a href="../../controller/traitements/category.php?cat=jsnode" id="jsNodePosts">
-                    <img src="../src/fonts/javascript.png" alt="Logo JavaScript">
-                    <img src="../src/fonts/node.png" alt="Logo NodeJS">
-                    <span>JavaScript</span>
-                </a>
-            </div>
-            <div>
-                <a href="../../controller/traitements/category.php?cat=phpmysql" id="phpMysqlPosts">
-                    <img src="../src/fonts/php.png" alt="Logo PHP">
-                    <img src="../src/fonts/database.png" alt="Logo SQL database">
-                    <span>PHP & MySQL</span>
-                </a>
-            </div>
-        </div>
+     }
+}
 
-    </main>
-
-    <script src="../src/scripts/accueil.js" type="text/javascript"></script>
-</body>
-</html>
+?>

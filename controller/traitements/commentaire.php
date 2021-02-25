@@ -37,8 +37,8 @@ $commentReq = $db->prep_request($commentprepare, $commentExecute);
                     <div class="like_comment">
                         <div>
                                 <span><?= $posts['likes']; ?> j'aime</span>
-                                <span><?= $posts['likes']; ?> Commentaire(s)</span>
-
+                                
+                                <span><?= $commentReq->rowCount(); ?> Commentaire(s)</span>
                         </div>
                     </div>
                 </div>
@@ -47,9 +47,11 @@ $commentReq = $db->prep_request($commentprepare, $commentExecute);
                     ?>
                 <div class="comment">
                     <div class="comment_header">
-                        <img src="../src/images/<?=$comment['avatar']?>" alt="<?=$comment['username']?>">
-                        <span><?=$comment['username'];?></span>
-                        <span class="date"><?=$comment['date']?></span>
+                        <span>
+                            <img src="../src/images/<?=$comment['avatar'];?>" alt="<?=$comment['username']?>">
+                            <span><?=$comment['username'];?></span>
+                        </span>
+                        <span class="com_date"><?=$comment['date']?></span>
                     </div>
                     <div class="comment_content">
                         <h2><?=$comment['content'];?></h2>

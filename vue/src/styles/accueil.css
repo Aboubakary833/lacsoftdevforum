@@ -130,6 +130,12 @@ main {
 
  }
 
+ #htmlPost {
+     margin-top: 200px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
  .postheader {
      width: inherit;
      display: flex;
@@ -176,6 +182,12 @@ main {
      word-wrap: break-word;
     }
 
+    .postcontent img {
+        width: 100%;
+        height: auto;
+        margin-left: 50%;
+    }
+
 .like_comment {
     width: 90%;
     height: auto;
@@ -201,7 +213,10 @@ main {
 
 .like_comment div:last-of-type a span {font-size: 20px;}
 
-.like_comment div:last-of-type a i{font-size: 32px;}
+.like_comment div:last-of-type span i, a i{
+    font-size: 28px;
+    cursor: pointer;
+}
 
 
  #categories {

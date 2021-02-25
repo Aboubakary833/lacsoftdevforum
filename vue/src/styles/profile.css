@@ -1,0 +1,122 @@
+body {
+    background: #f6f6f6;
+    text-align: center;
+}
+header {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    padding: 20px auto;
+    box-shadow: 0 0 0 2px #eee;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left:0;
+}
+
+header > div {
+    width: 50%;
+    padding: 15px 0px;
+    text-align: left;
+}
+
+header > div:first-of-type i{margin-left: 15px;}
+
+header > div > span {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+main {
+    width: 75%;
+    height: auto;
+    background: #fff;
+    margin-top: 75px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+#profile_img {
+    width: 100%;
+    height: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#profile_img img {
+    width: 30%;
+    height: 90%;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 0 0 7px #ddd;
+}
+
+#user-info {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#edit {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#editBtn {
+    padding: 12px 35px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    background: var(--secondary);
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+}
+
+#editBtn:hover {
+    box-shadow: 0 0 0 transparent;
+    opacity: 0.8;
+}
+
+.editForm {
+    margin: 5% auto;
+    display: none;
+}
+
+.editForm input {
+    width: 70%;
+    height: 5vh;
+    text-indent: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 25px;
+}
+
+label {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background: #eee;
+}
+
+.editForm input[type="file"] { display: none;}
+
+.editForm form button[type="submit"] {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 50px;
+    padding: 11px 35px;
+    border: none;
+    border-radius: 3px;
+    background: var(--secondary);
+    box-shadow: 0 1px 3px #ddd;
+}
+
+.show {display: block;}

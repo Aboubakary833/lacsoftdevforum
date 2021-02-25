@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="stylesheet" href="../src/fonts/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="../src/styles/general.css">
-    <link rel="stylesheet" href="../src/styles/admin.css">
-    <title>Admin Panel</title>
+    <link rel="stylesheet" href="../src/styles/notification.css">
+    <title>Notification</title>
 </head>
 <body>
-<header>
+    <header>
         <div>
             <a href="accueil.php?azenht4us=<?=$_GET['user_id']?>">
                 <i class="fa fa-arrow-left"></i>
@@ -18,14 +18,13 @@
             </a>
         </div>
         <div>
-            <span>Admin Panel</span>
+            <span>Notification(s)</span>
         </div>
-</header>
-<main>
-    <a href="enregistrement.php" class="addUser">Ajouter un développeur</a>
-    <?php  require_once "../../controller/traitements/getData.php"; ?>
-
-</main>
-<script src="../src/scripts/adminPanel.js"></script>
+    </header>
+    <main>
+        <ul>
+            <?php require_once"../../controller/traitements/notif_traitement.php"; ?>
+        </ul>
+    </main>
 </body>
 </html>
